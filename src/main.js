@@ -5,7 +5,13 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Character } from './../src/RPG.js';
 import {attributeInformation} from './../src/RPG.js';
+import {playerHealth} from './../src/RPG.js';
+import {playerXP} from './../src/RPG.js';
+import {playerCharacter} from './../src/RPG.js';
+import {CharacterBook} from './../src/RPG.js';
 // import 'bootstrap/dist/css/bootstrap.min.css';
+
+var characterBook = new CharacterBook();
 
 $(document).ready(function() {
 
@@ -20,19 +26,53 @@ $(document).ready(function() {
 
     var character = new Character (
       $("#nameInput").val(),
-      100,
+      playerHealth.value,
       1,
-      0,
+      playerXP.value,
       attributeInformation.strengthTotal,
       attributeInformation.defenceTotal,
       attributeInformation.presenceTotal,
       attributeInformation.resistanceTotal
     )
 
+    characterBook.addCharacter(character)
     console.log(character);
 
+    $("#creationCard").slideUp(1000);
+    $("#displayPlayerName").html(characterBook.characters[0].name);
+    $("#displayPlayerStrength").html("Strength: " + characterBook.characters[0].strength);
+    $("#displayPlayerDefence").html("Defence: " + characterBook.characters[0].defence);
+    $("#displayPlayerPresence").html("Presence: " + characterBook.characters[0].presence);
+    $("#displayPlayerResistance").html("Resistance: " + characterBook.characters[0].resistance);
+    $("#displayPlayerLevel").html(characterBook.characters[0].level);
+    $("#playerCard").slideDown(1000);
     event.preventDefault();
+
   });
+
+// Button test functions for HP
+$("#removeHPTest").click(function(){
+  playerHealth.value = playerHealth.value -10
+  characterBook.characters[0].health = playerHealth.value;
+  console.log(characterBook.characters[0].health);
+});
+$("#addHPTest").click(function(){
+  playerHealth.value = playerHealth.value +10
+  characterBook.characters[0].health = playerHealth.value;
+  console.log(characterBook.characters[0].health);
+});
+$("#removeXPTest").click(function(){
+  playerXP.value = playerXP.value -10
+  characterBook.characters[0].experience = playerXP.value;
+  console.log(characterBook.characters[0].experience);
+});
+$("#addXPTest").click(function(){
+  playerXP.value = playerXP.value +10
+  characterBook.characters[0].experience = playerXP.value;
+  console.log(characterBook.characters[0].experience);
+});
+
+
 
 // Creation button logic
   $("#addStrength").click(function(){

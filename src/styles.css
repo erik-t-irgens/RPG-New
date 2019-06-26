@@ -7,3 +7,18 @@
   text-align: right;
   margin-right: 42%;
 }
+
+#playerHealthDisplay, #playerXPDisplay {
+  width: 100%;
+}
+#playerCard {
+  display: none;
+  color: white;
+  text-align: center;
+}
+
+#displayPlayerLevel {
+  font-weight: bold;
+  color: gold;
+  text-shadow: 2px 2px 2px black;
+}

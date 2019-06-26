@@ -9,6 +9,10 @@
   </head>
   <body>
     <div class="container">
+
+
+
+
       <div class="card bg-secondary" id="creationCard">
         <form id="characterCreatorForm">
           <h2>Create character!</h2>
@@ -43,6 +47,46 @@
           <button type="submit" class="btn btn-outline-success" name="submitbutton" id="creatCharacterButton">Create!</button>
         </form>
       </div>
+
+
+      <div class="card bg-dark" id="playerCard">
+        <div class="card-title">
+          <h2 id="displayPlayerName"></h2>
+          <div class="row">
+            <div class="col-sm-3">
+              <h4 id="displayPlayerStrength"></h4>
+            </div>
+            <div class="col-sm-3">
+              <h4 id="displayPlayerDefence"></h4>
+            </div>
+            <div class="col-sm-3">
+              <h4 id="displayPlayerPresence"></h4>
+            </div>
+            <div class="col-sm-3">
+              <h4 id="displayPlayerResistance"></h4>
+            </div>
+
+          </div>
+          <h4 id="displayPlayerLevel"></h4>
+        </div>
+
+
+        <div class="card-body">
+          <progress id="playerHealthDisplay" class="progress-bar" value="100" max="100"></progress>
+          <progress id="playerXPDisplay" value="100" max="100"></progress>
+        </div>
+
+
+
+        <button type="button" name="healthXpTest" id="removeHPTest">Remove Hp!</button>
+        <button type="button" name="healthXpTest" id="addHPTest">Add Hp!</button>
+        <button type="button" name="healthXpTest" id="removeXPTest">Remove XP!</button>
+        <button type="button" name="healthXpTest" id="addXPTest">Add XP!</button>
+      </div>
+
+
+
+
     </div>
   </body>
 </html>
