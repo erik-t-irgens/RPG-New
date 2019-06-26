@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-
-    <title>Project Euler: Multiples of 5 and 3</title>
+    <!-- <script src="./src/bootstrap-input-spinner.js"></script>
+    <script>
+    $("input[type='number']").inputSpinner();
+    </script> -->
+    <title>RPG</title>
   </head>
   <body>
+    <div class="container">
+      <div class="card bg-secondary" id="creationCard">
+        <form id="characterCreatorForm">
+          <h2>Create character!</h2>
+          <label for="characterCreatorForm">Name:</label>
+          <input type="text" name="name" id="nameInput"><br>
+          <div id="attributeInputStyle">
 
+            <label for="characterCreatorForm" id="strengthPointPrint">Strength:</label>
+            <button type="button" name="addStrength" id="addStrength">+</button>
+            <button type="button" name="subStrength" id="subStrength">-</button>
+            <br>
 
+            <label for="characterCreatorForm" id="defencePointPrint">Defence:</label>
+            <button type="button" name="addDefence" id="addDefence">+</button>
+            <button type="button" name="subDefence" id="subDefence">-</button>
+            <br>
+
+            <label for="characterCreatorForm" id="presencePointPrint">Magical Presence:</label>
+            <button type="button" name="addPresence" id="addPresence">+</button>
+            <button type="button" name="subPresence" id="subPresence">-</button>
+            <br>
+
+            <label for="characterCreatorForm" id="resistancePointPrint">Resistance:</label>
+            <button type="button" name="addResistance" id="addResistance">+</button>
+            <button type="button" name="subResistance" id="subResistance">-</button>
+            <br>
+
+            <div id="attributePointPrint">
+
+            </div>
+          </div>
+          <button type="submit" class="btn btn-outline-success" name="submitbutton" id="creatCharacterButton">Create!</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

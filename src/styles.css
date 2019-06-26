@@ -1,1 +1,9 @@
 /*  Styles! */
+#creationCard {
+  text-align: center;
+  color: white;
+}
+#attributeInputStyle {
+  text-align: right;
+  margin-right: 42%;
+}
